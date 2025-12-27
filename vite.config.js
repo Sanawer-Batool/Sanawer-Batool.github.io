@@ -3,13 +3,15 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: "/", // ✅ REQUIRED for Sanawer-Batool.github.io
+  base: "/", // correct for username.github.io
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "docs", // 👈 THIS IS THE KEY
   },
 });
