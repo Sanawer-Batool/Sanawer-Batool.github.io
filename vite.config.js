@@ -5,6 +5,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/", // ✅ REQUIRED for Sanawer-Batool.github.io
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
